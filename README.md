@@ -201,8 +201,6 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
 If you like this project give ⭐️
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -223,9 +221,9 @@ I would like to thank...
 
 - **Why should I see your portfolio?**
 
-  - Because you want to hire me and my portfolio is the best thing that you should check out
+  - Because you want to hire me or interested in me and my portfolio is the best thing that you should check out
 
-- **[If I am in doubt, how can I be clafiry it]**
+- **[If I am in doubt, how can I clafiry it]**
 
   - If you have any question please <a href="mailto: bekjonishpulatov8@gmail.com">mail</a> it to me.
 
