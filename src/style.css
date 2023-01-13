@@ -1,50 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap'); /* Roboto 700 */
-@import url('https://fonts.googleapis.com/css2?family=Crete+Round&display=swap'); /* Crete Round 400*/
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&display=swap'); /* Crete Round 400 */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); /* Poppins 400 */
 
-
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
-    padding: 0 24px;
+  padding: 0 24px;
 }
 
 /* HEADER STARTED */
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #3C3A39;
-    height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #3c3a39;
+  height: 48px;
 }
 
 header > .logo > h1 {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 24px;
-    color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
 }
 
 header > .hamburger {
-    display: flex;
-    flex-direction: column;
-    row-gap: 3px;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+  justify-content: center;
 }
 
 header > .hamburger > .line {
-    width: 20px;
-    height: 2px;
-    background-color: #fff;
-    border-radius: 2px;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 2px;
 }
 
 /* HEADER ENDED */
@@ -52,50 +50,50 @@ header > .hamburger > .line {
 /* HEADLINE STARTED */
 
 section#headline {
-    display: flex;
-    flex-direction: column;
-    row-gap: 12px;
-    height: 100vh;
-    background-color: #1C1A19;   
-    background-image: url("./illustration-header-mobile.svg");
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-position-y: 135%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  height: 100vh;
+  background-color: #1c1a19;
+  background-image: url("./illustration-header-mobile.svg");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: 135%;
 }
 
 section#headline > h2 {
-    font-family: 'Crete Round', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 56px;
-    line-height: 64px;
-    letter-spacing: 0.37px;
-    color: #FF6B00;
-    margin-top: 120px;
+  font-family: 'Crete Round', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: 0.37px;
+  color: #ff6b00;
+  margin-top: 120px;
 }
 
 section#headline > p.subject {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 32px;
-    color: #FFF5E1;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #fff5e1;
 }
 
 section#headline > p.description {
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
 }
 
 section#headline > ul.social_media {
-    display: flex;
-    list-style-type: none;
-    column-gap: 16px;
-    padding: 4px;
-    margin-bottom: 120px;
+  display: flex;
+  list-style-type: none;
+  column-gap: 16px;
+  padding: 4px;
+  margin-bottom: 120px;
 }
