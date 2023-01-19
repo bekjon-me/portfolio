@@ -1,6 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap'); /* Roboto 700 */
-@import url('https://fonts.googleapis.com/css2?family=Crete+Round&display=swap'); /* Crete Round 400 */
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); /* Poppins 400 */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"); /* Roboto 700 */
+@import url("https://fonts.googleapis.com/css2?family=Crete+Round&display=swap"); /* Crete Round 400 */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap"); /* Poppins 400 */
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap"); /* Inter 400 */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap"); /* Inter 500 */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap"); /* Inter 700 */
 
 * {
   margin: 0;
@@ -24,7 +27,7 @@ header {
 
 header > h1 > a {
   text-decoration: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -63,7 +66,7 @@ section#headline {
 }
 
 section#headline > h2 {
-  font-family: 'Crete Round', sans-serif;
+  font-family: "Crete Round", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 56px;
@@ -74,7 +77,7 @@ section#headline > h2 {
 }
 
 section#headline > h3.subject {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -83,18 +86,296 @@ section#headline > h3.subject {
 }
 
 section#headline > p.description {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #fff;      
+  color: #fff;
 }
-            
+
 section#headline > ul.social_media {
   display: flex;
   list-style-type: none;
   column-gap: 16px;
   padding: 4px;
   margin-bottom: 120px;
+}
+
+/* HEADLINE ENDED */
+
+/* WORKS SECTION STARTED */
+
+section#works {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+section#works > h2 {
+  font-family: "Crete Round", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 52px;
+  color: #1c1a19;
+  margin-bottom: 24px;
+}
+
+section#works > .cards {
+  margin-top: 80px;
+  display: grid;
+  row-gap: 24px;
+}
+
+section#works > .cards > .specialCard {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+
+section#works > .cards > .specialCard > h3 {
+  font-family: "Crete Round", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 44px;
+  color: #091e42;
+}
+
+section#about > .info > p {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #f4f5f7;
+}
+
+section#works > .cards > .specialCard > p {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #091e42;
+}
+
+section#works > .cards > .specialCard > ul.languages {
+  display: flex;
+  list-style-type: none;
+  column-gap: 12px;
+}
+
+section#about > .hardSkills > ul > li {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 43px;
+  color: #fff;
+}
+
+section#about > .hardSkills > ul > li:first-child {
+  display: flex;
+  column-gap: 12px;
+}
+
+section#works > .cards > .specialCard > ul.languages > li {
+  padding: 10px 12px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #091e42;
+  border: 1px solid #8993a4;
+}
+
+section#about > .info > button {
+  background: #ff6b00;
+  padding: 12px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #fff;
+  border: 1px solid transparent;
+  width: fit-content;
+  margin-bottom: 210px;
+}
+
+section#works > .cards > .specialCard > button {
+  background-color: #ff6b00;
+  width: fit-content;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #fff;
+  padding: 12px;
+  border: 1px solid transparent;
+}
+
+section#works > .cards > .card > button {
+  background: #ff6b00;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #fff;
+  padding: 12px 0;
+  border: 1px solid transparent;
+  width: 100%;
+  margin-top: 10px;
+}
+
+section#about > .info > button:hover {
+  background: #fff5e1;
+  border: 1px solid #f55800;
+  color: #f55800;
+  cursor: pointer;
+}
+
+section#about > .info > button:active {
+  background: #e05304;
+  border: 1px solid transparent;
+  color: #f4f1f0;
+  cursor: pointer;
+}
+
+section#works > .cards > .specialCard > button:hover {
+  background: #fff5e1;
+  border: 1px solid #f55800;
+  color: #f55800;
+  cursor: pointer;
+}
+
+section#works > .cards > .specialCard > button:active {
+  background: #e05304;
+  border: 1px solid transparent;
+  color: #f4f1f0;
+  cursor: pointer;
+}
+
+section#works > .cards > .card {
+  background-image: url("./worksBg.svg");
+}
+
+section#works > .cards > .card > .information {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+
+section#about > .hardSkills > ul > li:first-child > h3 {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: #fff;
+}
+
+section#works > .cards > .card > .information > h3 {
+  font-family: "Crete Round", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 44px;
+  color: #fff;
+  margin-top: 84px;
+}
+
+section#works > .cards > .card > .information > p {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+}
+
+section#works > .cards > .card > .information > ul.languages {
+  display: flex;
+  list-style-type: none;
+  column-gap: 12px;
+}
+
+section#works > .cards > .card > .information > ul.languages > li {
+  padding: 10px 12px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.24);
+}
+
+section#works > .cards > .card > button:hover {
+  background: #fff5e1;
+  border: 1px solid #f55800;
+  color: #f55800;
+  cursor: pointer;
+}
+
+section#works > .cards > .card > button:active {
+  background: #e05304;
+  border: 1px solid transparent;
+  color: #f4f1f0;
+  cursor: pointer;
+}
+
+/* WORKS SECTION ENDED */
+
+/* ABOUT SECTION STARTED */
+
+section#about {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background: #1c1a19;
+}
+
+section#about > .info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  background-image: url("./illustration-about-me-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+section#about > .info > h2 {
+  font-family: "Crete Round", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 88px;
+  letter-spacing: 0.37px;
+  color: #ff6b00;
+}
+
+section#about > .hardSkills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 24px;
+  padding-top: 120px;
+}
+
+section#about > .hardSkills > ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 32px;
+  list-style-type: none;
 }
