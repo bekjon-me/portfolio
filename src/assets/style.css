@@ -251,20 +251,6 @@ section#about > .info > button:active {
   cursor: pointer;
 }
 
-section#works > .cards > .specialCard > button:hover {
-  background: #fff5e1;
-  border: 1px solid #f55800;
-  color: #f55800;
-  cursor: pointer;
-}
-
-section#works > .cards > .specialCard > button:active {
-  background: #e05304;
-  border: 1px solid transparent;
-  color: #f4f1f0;
-  cursor: pointer;
-}
-
 section#works > .cards > .card {
   background-image: url("./worksBg.svg");
 }
@@ -321,14 +307,14 @@ section#works > .cards > .card > .information > ul.languages > li {
   background: rgba(255, 255, 255, 0.24);
 }
 
-section#works > .cards > .card > button:hover {
+section#works .cards button:hover {
   background: #fff5e1;
   border: 1px solid #f55800;
   color: #f55800;
   cursor: pointer;
 }
 
-section#works > .cards > .card > button:active {
+section#works .cards button:active {
   background: #e05304;
   border: 1px solid transparent;
   color: #f4f1f0;
