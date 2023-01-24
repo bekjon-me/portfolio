@@ -94,12 +94,18 @@ section#headline > p.description {
   color: #fff;
 }
 
-section#headline > ul.social_media {
+ul.social_media {
   display: flex;
   list-style-type: none;
   column-gap: 16px;
   padding: 4px;
   margin-bottom: 120px;
+}
+
+#contact_social i  {
+  color: #1c1a19;
+  font-size: 30px;
+  margin-top: 100px;
 }
 
 /* HEADLINE ENDED */
