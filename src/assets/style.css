@@ -103,15 +103,13 @@ ul.social_media {
 
 #contact_social {
   justify-content: center;
-  padding-bottom: 20px;
 }
 
-
-#contact_social i  {
+#contact_social i {
   color: #1c1a19;
-  font-size: 30px;
-  margin-top: 100px;
-  margin-right: 15px;
+  font-size: 24px;
+  margin-top: 23px;
+  margin-bottom: 24px;
 }
 
 /* HEADLINE ENDED */
