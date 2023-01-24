@@ -203,6 +203,20 @@ section#works > .cards > .specialCard > ul.languages > li {
   border: 1px solid #8993a4;
 }
 
+section#contact > form button {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #fff;
+  background: #ff6b00;
+  padding: 12px;
+  border: none;
+  width: fit-content;
+}
+
 section#about > .info > button {
   background: #ff6b00;
   padding: 12px;
@@ -354,6 +368,16 @@ section#about > .info {
   background-position: bottom right;
 }
 
+section#contact > h2 {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  text-align: center;
+  color: #172b4d;
+}
+
 section#about > .info > h2 {
   font-family: "Crete Round", sans-serif;
   font-style: normal;
@@ -380,7 +404,7 @@ section#about > .hardSkills > ul {
   list-style-type: none;
 }
 
-/*SECTION ABOUT ENDED */
+/* SECTION ABOUT ENDED */
 
 /* CONTACT SECTION STARTED */
 
@@ -388,16 +412,6 @@ section#contact {
   padding-top: 120px;
   padding-bottom: 120px;
   border-bottom: 1px solid #dbd8d7;
-}
-
-section#contact > h2 {
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 44px;
-  text-align: center;
-  color: #172b4d;
 }
 
 section#contact > form {
@@ -425,18 +439,4 @@ section#contact > form textarea {
 section#contact > form textarea {
   background-color: #fbf8f7;
   border: none;
-}
-
-section#contact > form button {
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
-  color: #ffffff;
-  background: #ff6b00;
-  padding: 12px;
-  border: none;
-  width: fit-content;
 }
