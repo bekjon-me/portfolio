@@ -161,9 +161,9 @@ section#works > .cards > .specialCard > p {
 }
 
 section#works > .cards > .specialCard > ul.languages {
-  display: flex;
+  float: left;
   list-style-type: none;
-  column-gap: 12px;
+  white-space: nowrap;
 }
 
 section#about > .hardSkills > ul > li {
@@ -181,6 +181,8 @@ section#about > .hardSkills > ul > li:first-child {
 }
 
 section#works > .cards > .specialCard > ul.languages > li {
+  display: inline-block;
+  width: fit-content;
   padding: 10px 12px;
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -366,4 +368,65 @@ section#about > .hardSkills > ul {
   align-items: center;
   row-gap: 32px;
   list-style-type: none;
+}
+
+/*SECTION ABOUT ENDED */
+
+/* CONTACT SECTION STARTED */
+
+section#contact {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  border-bottom: 1px solid #dbd8d7;
+}
+
+section#contact > h2 {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  text-align: center;
+  color: #172b4d;
+}
+
+section#contact > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 24px;
+}
+
+section#contact > form input,
+section#contact > form textarea {
+  padding: 14px;
+  border: none;
+  border-bottom: 1px solid #dbd8d7;
+  outline: none;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #979493;
+  width: 100%;
+}
+
+section#contact > form textarea {
+  background-color: #fbf8f7;
+  border: none;
+}
+
+section#contact > form button {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  background: #ff6b00;
+  padding: 12px;
+  border: none;
+  width: fit-content;
 }
