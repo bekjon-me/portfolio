@@ -215,6 +215,7 @@ section#contact > form button {
   padding: 12px;
   border: none;
   width: fit-content;
+  border: 1px solid transparent;
 }
 
 section#about > .info > button {
@@ -341,6 +342,20 @@ section#works .cards button:hover {
 }
 
 section#works .cards button:active {
+  background: #e05304;
+  border: 1px solid transparent;
+  color: #f4f1f0;
+  cursor: pointer;
+}
+
+section#contact button:hover {
+  background: #fff5e1;
+  border: 1px solid #f55800;
+  color: #f55800;
+  cursor: pointer;
+}
+
+section#contact button:active {
   background: #e05304;
   border: 1px solid transparent;
   color: #f4f1f0;
