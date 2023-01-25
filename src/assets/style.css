@@ -94,12 +94,22 @@ section#headline > p.description {
   color: #fff;
 }
 
-section#headline > ul.social_media {
+ul.social_media {
   display: flex;
   list-style-type: none;
   column-gap: 16px;
   padding: 4px;
-  margin-bottom: 120px;
+}
+
+#contact_social {
+  justify-content: center;
+}
+
+#contact_social i {
+  color: #1c1a19;
+  font-size: 24px;
+  margin-top: 23px;
+  margin-bottom: 24px;
 }
 
 /* HEADLINE ENDED */
@@ -161,9 +171,9 @@ section#works > .cards > .specialCard > p {
 }
 
 section#works > .cards > .specialCard > ul.languages {
-  display: flex;
+  float: left;
   list-style-type: none;
-  column-gap: 12px;
+  white-space: nowrap;
 }
 
 section#about > .hardSkills > ul > li {
@@ -181,6 +191,8 @@ section#about > .hardSkills > ul > li:first-child {
 }
 
 section#works > .cards > .specialCard > ul.languages > li {
+  display: inline-block;
+  width: fit-content;
   padding: 10px 12px;
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -189,6 +201,20 @@ section#works > .cards > .specialCard > ul.languages > li {
   line-height: 20px;
   color: #091e42;
   border: 1px solid #8993a4;
+}
+
+section#contact > form button {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #fff;
+  background: #ff6b00;
+  padding: 12px;
+  border: 1px solid transparent;
+  width: fit-content;
 }
 
 section#about > .info > button {
@@ -205,6 +231,20 @@ section#about > .info > button {
   border: 1px solid transparent;
   width: fit-content;
   margin-bottom: 210px;
+}
+
+section#contact button:hover {
+  background: #fff5e1;
+  border: 1px solid #f55800;
+  color: #f55800;
+  cursor: pointer;
+}
+
+section#contact button:active {
+  background: #e05304;
+  border: 1px solid transparent;
+  color: #f4f1f0;
+  cursor: pointer;
 }
 
 section#works > .cards > .specialCard > button {
@@ -342,6 +382,16 @@ section#about > .info {
   background-position: bottom right;
 }
 
+section#contact > h2 {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  text-align: center;
+  color: #172b4d;
+}
+
 section#about > .info > h2 {
   font-family: "Crete Round", sans-serif;
   font-style: normal;
@@ -366,4 +416,41 @@ section#about > .hardSkills > ul {
   align-items: center;
   row-gap: 32px;
   list-style-type: none;
+}
+
+/* SECTION ABOUT ENDED */
+
+/* CONTACT SECTION STARTED */
+
+section#contact {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  border-bottom: 1px solid #dbd8d7;
+}
+
+section#contact > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 24px;
+}
+
+section#contact > form input,
+section#contact > form textarea {
+  padding: 14px;
+  border: none;
+  border-bottom: 1px solid #dbd8d7;
+  outline: none;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #979493;
+  width: 100%;
+}
+
+section#contact > form textarea {
+  background-color: #fbf8f7;
+  border: none;
 }

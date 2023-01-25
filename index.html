@@ -10,6 +10,10 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="./src/assets/style.css" />
+    <script
+      src="https://kit.fontawesome.com/3b9cd09213.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Personal portfolio</title>
   </head>
   <body>
@@ -226,5 +230,58 @@
         </ul>
       </div>
     </section>
+
+    <section id="contact" class="container">
+      <h2>
+        I'm always interested in hearing about new projects, so if you'd like to
+        chat please get in touch.
+      </h2>
+      <form action="https://formspree.io/f/myyoqjqz" method="post">
+        <input
+          type="text"
+          name="name"
+          placeholder="Full name"
+          maxlength="30"
+          required
+        />
+        <input type="email" name="email" placeholder="Email address" required />
+        <textarea
+          name="message"
+          cols="30"
+          rows="5"
+          placeholder="Enter text here"
+          maxlength="500"
+          required
+        ></textarea>
+        <button type="submit">Get in touch</button>
+      </form>
+    </section>
+    <footer>
+      <ul class="social_media" id="contact_social">
+        <li>
+          <a href="https://github.com/"><i class="fa-brands fa-github"></i> </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/"
+            ><i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://angel.co/"
+            ><i class="fa-brands fa-angellist"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/"
+            ><i class="fa-brands fa-twitter"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://codepen.com/"
+            ><i class="fa-brands fa-codepen"></i>
+          </a>
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>
