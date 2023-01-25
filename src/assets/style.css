@@ -213,9 +213,8 @@ section#contact > form button {
   color: #fff;
   background: #ff6b00;
   padding: 12px;
-  border: none;
-  width: fit-content;
   border: 1px solid transparent;
+  width: fit-content;
 }
 
 section#about > .info > button {
@@ -232,6 +231,20 @@ section#about > .info > button {
   border: 1px solid transparent;
   width: fit-content;
   margin-bottom: 210px;
+}
+
+section#contact button:hover {
+  background: #fff5e1;
+  border: 1px solid #f55800;
+  color: #f55800;
+  cursor: pointer;
+}
+
+section#contact button:active {
+  background: #e05304;
+  border: 1px solid transparent;
+  color: #f4f1f0;
+  cursor: pointer;
 }
 
 section#works > .cards > .specialCard > button {
@@ -342,20 +355,6 @@ section#works .cards button:hover {
 }
 
 section#works .cards button:active {
-  background: #e05304;
-  border: 1px solid transparent;
-  color: #f4f1f0;
-  cursor: pointer;
-}
-
-section#contact button:hover {
-  background: #fff5e1;
-  border: 1px solid #f55800;
-  color: #f55800;
-  cursor: pointer;
-}
-
-section#contact button:active {
   background: #e05304;
   border: 1px solid transparent;
   color: #f4f1f0;
