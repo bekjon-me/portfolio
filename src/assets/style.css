@@ -60,6 +60,7 @@ header > .hamburger > .nav-links {
 section#headline {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   padding: 0 24px;
   height: 100vh;
   background-color: #1c1a19;
@@ -67,12 +68,26 @@ section#headline {
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: 135%;
+  padding-bottom: 120px;
 }
 
-section#headline > .info > h2 {
+section#headline > .info {
   display: flex;
   flex-direction: column;
   row-gap: 12px;
+}
+
+section#contact > h2 {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  text-align: center;
+  color: #172b4d;
+}
+
+section#headline > .info > h2 {
   font-family: "Crete Round", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -124,11 +139,11 @@ ul.social_media {
 /* WORKS SECTION STARTED */
 
 section#works {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  margin-top: 120px;
+  margin-bottom: 120px;
 }
 
-section#works > h2 {
+section#works > .title > h2 {
   font-family: "Crete Round", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -136,6 +151,10 @@ section#works > h2 {
   line-height: 52px;
   color: #1c1a19;
   margin-bottom: 24px;
+}
+
+section#works > .title > .line {
+  border: 1px solid #212121;
 }
 
 section#works > .cards {
@@ -150,7 +169,22 @@ section#works > .cards > .specialCard {
   row-gap: 12px;
 }
 
-section#works > .cards > .specialCard > h3 {
+section#works > .cards > .otherCards {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+section#about > .hardSkills > ul > li:first-child > h3 {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: #fff;
+}
+
+section#works > .cards > .specialCard > .description > h3 {
   font-family: "Crete Round", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -159,7 +193,7 @@ section#works > .cards > .specialCard > h3 {
   color: #091e42;
 }
 
-section#about > .info > p {
+section#about > .info > .content > p {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -168,7 +202,7 @@ section#about > .info > p {
   color: #f4f5f7;
 }
 
-section#works > .cards > .specialCard > p {
+section#works > .cards > .specialCard > .description > p {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -177,7 +211,7 @@ section#works > .cards > .specialCard > p {
   color: #091e42;
 }
 
-section#works > .cards > .specialCard > ul.languages {
+section#works > .cards > .specialCard > .description > ul.languages {
   float: left;
   list-style-type: none;
   white-space: nowrap;
@@ -197,7 +231,7 @@ section#about > .hardSkills > ul > li:first-child {
   column-gap: 12px;
 }
 
-section#works > .cards > .specialCard > ul.languages > li {
+section#works > .cards > .specialCard > .description > ul.languages > li {
   display: inline-block;
   width: fit-content;
   padding: 10px 12px;
@@ -224,22 +258,6 @@ section#contact > form button {
   width: fit-content;
 }
 
-section#about > .info > button {
-  background: #ff6b00;
-  padding: 12px;
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 24px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #fff;
-  border: 1px solid transparent;
-  width: fit-content;
-  margin-bottom: 210px;
-}
-
 section#contact button:hover {
   background: #fff5e1;
   border: 1px solid #f55800;
@@ -254,34 +272,20 @@ section#contact button:active {
   cursor: pointer;
 }
 
-section#works > .cards > .specialCard > button {
-  background-color: #ff6b00;
-  width: fit-content;
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
-  color: #fff;
-  padding: 12px;
-  border: 1px solid transparent;
-}
-
-section#works > .cards > .card > button {
+section#about > .info > .content > button {
   background: #ff6b00;
+  padding: 12px;
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
-  letter-spacing: 0.03em;
   text-align: center;
+  letter-spacing: 0.03em;
   color: #fff;
-  padding: 12px 0;
   border: 1px solid transparent;
-  width: 100%;
-  margin-top: 10px;
+  width: fit-content;
+  margin-bottom: 210px;
 }
 
 section#about > .info > button:hover {
@@ -298,27 +302,52 @@ section#about > .info > button:active {
   cursor: pointer;
 }
 
-section#works > .cards > .card {
-  background-image: url("./worksBg.svg");
+section#works > .cards > .specialCard > .description > button {
+  background-color: #ff6b00;
+  width: fit-content;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #fff;
+  padding: 12px;
+  border: 1px solid transparent;
 }
 
-section#works > .cards > .card > .information {
+section#works > .cards > .otherCards > .card > button {
+  background: #ff6b00;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #fff;
+  padding: 12px 0;
+  border: 1px solid transparent;
+  outline: none;
+  width: 100%;
+  margin-top: 10px;
+}
+
+section#works > .cards > .otherCards > .card {
+  background-image: url("./worksBg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+section#works > .cards > .otherCards > .card > .information {
   padding: 0 16px;
   display: flex;
   flex-direction: column;
   row-gap: 12px;
 }
 
-section#about > .hardSkills > ul > li:first-child > h3 {
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 44px;
-  color: #fff;
-}
-
-section#works > .cards > .card > .information > h3 {
+section#works > .cards > .otherCards > .card > .information > h3 {
   font-family: "Crete Round", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -328,7 +357,7 @@ section#works > .cards > .card > .information > h3 {
   margin-top: 84px;
 }
 
-section#works > .cards > .card > .information > p {
+section#works > .cards > .otherCards > .card > .information > p {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -337,13 +366,13 @@ section#works > .cards > .card > .information > p {
   color: #fff;
 }
 
-section#works > .cards > .card > .information > ul.languages {
+section#works > .cards > .otherCards > .card > .information > ul.languages {
   display: flex;
   list-style-type: none;
   column-gap: 12px;
 }
 
-section#works > .cards > .card > .information > ul.languages > li {
+section#works > .cards > .otherCards > .card > .information > ul.languages > li {
   padding: 10px 12px;
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -354,14 +383,28 @@ section#works > .cards > .card > .information > ul.languages > li {
   background: rgba(255, 255, 255, 0.24);
 }
 
-section#works .cards button:hover {
+section#works .cards > .otherCards button:hover {
   background: #fff5e1;
   border: 1px solid #f55800;
   color: #f55800;
   cursor: pointer;
 }
 
-section#works .cards button:active {
+section#works .cards > .specialCard button:hover {
+  background: #fff5e1;
+  border: 1px solid #f55800;
+  color: #f55800;
+  cursor: pointer;
+}
+
+section#works .cards > .otherCards button:active {
+  background: #e05304;
+  border: 1px solid transparent;
+  color: #f4f1f0;
+  cursor: pointer;
+}
+
+section#works .cards > .specialCard button:active {
   background: #e05304;
   border: 1px solid transparent;
   color: #f4f1f0;
@@ -381,25 +424,18 @@ section#about {
 }
 
 section#about > .info {
-  display: flex;
-  flex-direction: column;
-  row-gap: 24px;
   background-image: url("./illustration-about-me-mobile.svg");
   background-repeat: no-repeat;
   background-position: bottom right;
 }
 
-section#contact > h2 {
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 44px;
-  text-align: center;
-  color: #172b4d;
+section#about > .info > .content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
 }
 
-section#about > .info > h2 {
+section#about > .info > .content > h2 {
   font-family: "Crete Round", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -430,9 +466,8 @@ section#about > .hardSkills > ul {
 /* CONTACT SECTION STARTED */
 
 section#contact {
-  padding-top: 120px;
+  margin-top: 120px;
   padding-bottom: 120px;
-  border-bottom: 1px solid #dbd8d7;
 }
 
 section#contact > form {
@@ -464,7 +499,7 @@ section#contact > form textarea {
 
 @media screen and (min-width: 776px) {
   .container {
-    padding: 0 142px;
+    padding: 0 142px !important;
   }
 
   header {
@@ -492,7 +527,7 @@ section#contact > form textarea {
     font-weight: 600;
     font-size: 15px;
     line-height: 20px;
-    color: #ffffff;
+    color: #fff;
   }
 
   /* HEADER ENDED */
@@ -508,8 +543,17 @@ section#contact > form textarea {
   }
 
   section#headline > .info {
-    width: 30%;
+    width: 490px;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+  }
+
+  section#contact > h2 {
+    width: 455px;
+    font-size: 40px;
+    line-height: 52px;
   }
 
   section#headline > .info > h2 {
@@ -536,5 +580,109 @@ section#contact > form textarea {
     flex-direction: column;
     margin-right: 87px;
     row-gap: 23px;
+  }
+
+  /* HEADLINE SECTION ENDED */
+
+  /* WORKS SECTION STARTED */
+
+  section#works {
+    margin-top: 130px;
+    margin-bottom: 130px;
+  }
+
+  section#works > .title {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+  }
+
+  section#works > .title > h2 {
+    white-space: nowrap;
+  }
+
+  section#works > .title > .line {
+    width: 100%;
+    height: 1px;
+    transform: translateY(-10px);
+  }
+
+  section#works > .cards {
+    margin-top: 114px;
+    display: grid;
+    row-gap: 24px;
+  }
+
+  section#works > .cards > .specialCard {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    justify-content: center;
+  }
+
+  section#works > .cards > .specialCard > img {
+    width: 60%;
+  }
+
+  section#works > .cards > .specialCard > .description {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+  }
+
+  section#works > .cards > .otherCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 36px;
+    justify-content: space-around;
+  }
+
+  section#works > .cards > .otherCards > .card {
+    width: 30%;
+    min-width: 280px;
+  }
+
+  /* WORKS SECTION ENDED */
+
+  /* ABOUT SECTION STARTED */
+
+  section#about {
+    margin-top: 130px;
+  }
+
+  section#about > .info {
+    background-image: url("illustration-about\ me.svg");
+    background-repeat: no-repeat;
+    background-position: center right;
+  }
+
+  section#about > .info > .content {
+    width: 500px;
+  }
+
+  section#about > .info > .content > button {
+    margin-bottom: 130px;
+  }
+
+  section#about > .hardSkills {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  section#about > .hardSkills > ul {
+    align-items: flex-start;
+  }
+
+  section#contact {
+    margin-top: 130px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    column-gap: 24px;
+    margin-bottom: 130px;
   }
 }
