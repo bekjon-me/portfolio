@@ -331,6 +331,7 @@ section#works > .cards > .otherCards > .card > button {
   outline: none;
   width: 100%;
   margin-top: 10px;
+  visibility: hidden;
 }
 
 section#works > .cards > .otherCards > .card {
@@ -338,6 +339,45 @@ section#works > .cards > .otherCards > .card {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  border: 1px solid transparent;
+}
+
+section#works .cards > .otherCards button:hover {
+  background: #fff5e1;
+  border: 1px solid #f55800;
+  color: #f55800;
+  cursor: pointer;
+}
+
+section#works .cards > .specialCard button:hover {
+  background: #fff5e1;
+  border: 1px solid #f55800;
+  color: #f55800;
+  cursor: pointer;
+}
+
+section#works .cards > .otherCards button:active {
+  background: #e05304;
+  border: 1px solid transparent;
+  color: #f4f1f0;
+  cursor: pointer;
+}
+
+section#works .cards > .specialCard button:active {
+  background: #e05304;
+  border: 1px solid transparent;
+  color: #f4f1f0;
+  cursor: pointer;
+}
+
+section#works > .cards > .otherCards > .card:hover button {
+  visibility: visible;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+
+section#works > .cards > .otherCards > .card:hover {
+  border: 1px solid #262626;
 }
 
 section#works > .cards > .otherCards > .card > .information {
@@ -381,34 +421,6 @@ section#works > .cards > .otherCards > .card > .information > ul.languages > li 
   line-height: 20px;
   color: #fff;
   background: rgba(255, 255, 255, 0.24);
-}
-
-section#works .cards > .otherCards button:hover {
-  background: #fff5e1;
-  border: 1px solid #f55800;
-  color: #f55800;
-  cursor: pointer;
-}
-
-section#works .cards > .specialCard button:hover {
-  background: #fff5e1;
-  border: 1px solid #f55800;
-  color: #f55800;
-  cursor: pointer;
-}
-
-section#works .cards > .otherCards button:active {
-  background: #e05304;
-  border: 1px solid transparent;
-  color: #f4f1f0;
-  cursor: pointer;
-}
-
-section#works .cards > .specialCard button:active {
-  background: #e05304;
-  border: 1px solid transparent;
-  color: #f4f1f0;
-  cursor: pointer;
 }
 
 /* WORKS SECTION ENDED */
@@ -551,7 +563,8 @@ section#contact > form textarea {
   }
 
   section#contact > h2 {
-    width: 455px;
+    width: 40%;
+    min-width: 320px;
     font-size: 40px;
     line-height: 52px;
   }
@@ -681,8 +694,16 @@ section#contact > form textarea {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     column-gap: 24px;
     margin-bottom: 130px;
+  }
+
+  section#contact > form {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 24px;
   }
 }
