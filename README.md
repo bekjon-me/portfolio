@@ -78,7 +78,7 @@ This is my personal **Portfolio**. You can find more about me here.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- Coming...
+- [Online Version](https://bekjon-me.github.io/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
