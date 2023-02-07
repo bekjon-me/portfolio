@@ -42,6 +42,20 @@ header > .hamburger {
   justify-content: center;
 }
 
+header > .is-active > .line:first-child {
+  transform: translate(0, 120%) rotate(45deg);
+  animation: line1 0.3s ease-in-out;
+}
+
+header > .is-active > .line:last-child {
+  transform: translate(0, -120%) rotate(-45deg);
+  animation: line2 0.3s ease-in-out;
+}
+
+header > .is-active > .line:nth-child(2) {
+  display: none;
+}
+
 header > .hamburger > .line {
   width: 20px;
   height: 2px;
@@ -49,8 +63,26 @@ header > .hamburger > .line {
   border-radius: 2px;
 }
 
-header > .hamburger > .nav-links {
+header a {
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #fff;
+}
+
+header > nav {
   display: none;
+}
+
+header > .open {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+  justify-content: center;
 }
 
 /* HEADER ENDED */
@@ -417,7 +449,13 @@ section#works > .cards > .otherCards > .card > .information > ul.languages {
   column-gap: 12px;
 }
 
-section#works > .cards > .otherCards > .card > .information > ul.languages > li {
+section#works
+  > .cards
+  > .otherCards
+  > .card
+  > .information
+  > ul.languages
+  > li {
   padding: 10px 12px;
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -528,14 +566,18 @@ section#contact > form textarea {
     line-height: 20px;
   }
 
-  header > .hamburger > .line {
+  header > .hamburger {
     display: none;
   }
 
-  header > .hamburger > .nav-links {
+  header > nav {
+    display: block;
+  }
+
+  header > nav > ul {
     display: flex;
-    column-gap: 32px;
-    list-style: none;
+    list-style-type: none;
+    column-gap: 24px;
   }
 
   header > .hamburger > .nav-links > li {
@@ -710,5 +752,23 @@ section#contact > form textarea {
     flex-direction: column;
     align-items: flex-start;
     row-gap: 24px;
+  }
+}
+
+@keyframes line1 {
+  from {
+    transform: none;
+  }
+  to {
+    transform: translate(0, 120%) rotate(45deg);
+  }
+}
+
+@keyframes line2 {
+  from {
+    transform: none;
+  }
+  to {
+    transform: translate(0, -120%) rotate(-45deg);
   }
 }
