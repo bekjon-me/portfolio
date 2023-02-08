@@ -489,13 +489,7 @@ section#works > .cards > .otherCards > .card > .information > ul.languages {
   column-gap: 12px;
 }
 
-section#works
-  > .cards
-  > .otherCards
-  > .card
-  > .information
-  > ul.languages
-  > li {
+section#works > .cards > .otherCards > .card > .information > ul.languages > li {
   padding: 10px 12px;
   font-family: 'Inter', sans-serif;
   font-style: normal;
