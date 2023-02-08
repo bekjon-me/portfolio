@@ -15,16 +15,20 @@
   <body>
     <header class="container">
       <h1><a href="#">Bekjon</a></h1>
-      <nav class="hamburger">
+      <div class="hamburger">
         <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div>
+      </div>
+      <nav>
         <ul class="nav-links">
-          <li class="nav-link">Portfolio</li>
-          <li class="nav-link">About</li>
-          <li class="nav-link">Contact</li>
+          <li class="nav-link works"><a href="#works">Portfolio</a></li>
+          <li class="nav-link about"><a href="#about">About</a></li>
+          <li class="nav-link contact"><a href="#contact">Contact</a></li>
           <li class="nav-link">
-            <i class="far fa-envelope"></i>
+            <a href="mailto:bekjonishpulatov8@gmail.com">
+              <i class="far fa-envelope"></i>
+            </a>
           </li>
         </ul>
       </nav>
@@ -112,7 +116,9 @@
                 <li>Ruby</li>
               </ul>
             </div>
-            <button type="button" onclick="() => console.log('salom')">See Project</button>
+            <button type="button" onclick="() => console.log('salom')">
+              See Project
+            </button>
           </div>
 
           <div class="card">
@@ -308,5 +314,7 @@
       src="https://kit.fontawesome.com/3b9cd09213.js"
       crossorigin="anonymous"
     ></script>
+
+    <script src="src/index.js"></script>
   </body>
 </html>
