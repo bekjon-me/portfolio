@@ -23,6 +23,10 @@ header {
   justify-content: space-between;
   background-color: #3c3a39;
   height: 48px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 header a {
@@ -99,6 +103,10 @@ header .nav-links li a {
   font-size: 32px;
   line-height: 44px;
   color: #fff5e1;
+}
+
+header .nav-links li.active {
+  border-bottom: 1px solid #6f6c6b;
 }
 
 header .nav-links li {
@@ -482,7 +490,13 @@ section#works > .cards > .otherCards > .card > .information > ul.languages {
   column-gap: 12px;
 }
 
-section#works > .cards > .otherCards > .card > .information > ul.languages > li {
+section#works
+  > .cards
+  > .otherCards
+  > .card
+  > .information
+  > ul.languages
+  > li {
   padding: 10px 12px;
   font-family: 'Inter', sans-serif;
   font-style: normal;
@@ -609,17 +623,33 @@ section#contact > form textarea {
     width: auto;
     display: flex;
     flex-direction: row;
+    align-items: center;
     position: relative;
     padding: 0;
   }
 
-  header > .nav-links > li {
+  header .nav-links li {
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 15px;
     line-height: 20px;
     color: #fff;
+    border-bottom: none;
+    transform: translate(0, 5%);
+  }
+
+  header .nav-links li.active {
+    border-bottom: 2px solid #fff;
+    transition: all 0.3s ease-in-out;
+  }
+
+  header .nav-links li.active a {
+    color: rgba(245, 231, 231, 0.849);
+  }
+
+  header .nav-links li:last-child {
+    display: block;
   }
 
   /* HEADER ENDED */
