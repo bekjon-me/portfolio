@@ -23,10 +23,9 @@ header {
   justify-content: space-between;
   background-color: #3c3a39;
   height: 48px;
-  width: 100%;
   position: fixed;
-  top: 0;
-  left: 0;
+  width: 100%;
+  z-index: 2;
 }
 
 header a {
@@ -60,7 +59,7 @@ header > .hamburger {
 header > .hamburger > .line {
   width: 20px;
   height: 2px;
-  background-color: #fff;
+  background: rgba(103, 121, 142, 1);
   border-radius: 2px;
 }
 
@@ -490,7 +489,13 @@ section#works > .cards > .otherCards > .card > .information > ul.languages {
   column-gap: 12px;
 }
 
-section#works > .cards > .otherCards > .card > .information > ul.languages > li {
+section#works
+  > .cards
+  > .otherCards
+  > .card
+  > .information
+  > ul.languages
+  > li {
   padding: 10px 12px;
   font-family: 'Inter', sans-serif;
   font-style: normal;
@@ -597,6 +602,16 @@ section#contact > form textarea {
   }
 
   header a {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  header > .open {
+    position: relative;
+  }
+
+  header h1 {
+    display: block;
     font-size: 20px;
     line-height: 20px;
   }
