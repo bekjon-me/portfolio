@@ -637,15 +637,18 @@ section#contact > form textarea {
     padding: 0;
   }
 
-  header .nav-links li {
+  header .nav-links li a {
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 15px;
     line-height: 20px;
     color: #fff;
-    border-bottom: none;
     transform: translate(0, 5%);
+  }
+
+  header .nav-links li {
+    border-bottom: none;
   }
 
   header .nav-links li.active {
