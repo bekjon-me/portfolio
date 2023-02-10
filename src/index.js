@@ -10,6 +10,37 @@ const modalH2 = document.querySelector('.modal-header h2');
 const modalText = document.querySelector('.modal-body p');
 const languages = document.querySelectorAll('.modal-header ul');
 const image = document.querySelector('.modal-body img');
+const formInputs = document.querySelectorAll('#contact input');
+const textarea = document.querySelector('#contact textarea');
+
+let formData = {
+  name: '',
+  email: '',
+  message: '',
+};
+
+if (localStorage.getItem('formData')) {
+  const data = JSON.parse(localStorage.getItem('formData'));
+  formData = data;
+  formInputs.forEach((input) => {
+    input.value = data[input.name];
+  });
+  textarea.value = data.message;
+}
+
+formInputs.forEach((input) => {
+  input.addEventListener('input', (e) => {
+    formData[e.target.name] = e.target.value;
+    console.log(formData);
+    localStorage.setItem('formData', JSON.stringify(formData));
+  });
+});
+
+textarea.addEventListener('input', (e) => {
+  console.log(formData);
+  formData[e.target.name] = e.target.value;
+  localStorage.setItem('formData', JSON.stringify(formData));
+});
 
 window.onscroll = () => {
   let current = '';
