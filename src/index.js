@@ -11,8 +11,6 @@ const modalText = document.querySelector('.modal-body p');
 const languages = document.querySelectorAll('.modal-header ul');
 const image = document.querySelector('.modal-body img');
 
-console.log(allSeeProjectBtns);
-
 window.onscroll = () => {
   let current = '';
   sections.forEach((section) => {
