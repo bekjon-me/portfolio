@@ -312,24 +312,36 @@
       </ul>
     </footer>
 
-    <section class="modalContainer">
-      <div class="modal">
-        <div class="content">
-          <div class="close">Close</div>
-          <h1>Hello, World!</h1>
-          <p>
-            <a href="https://www.jqueryscript.net/tags.php?/Modal/">Modal</a>
-            Content Here
-          </p>
+    <div class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2></h2>
+          <span class="close">&times;</span>
+          <ul class="languages"></ul>
+        </div>
+        <div class="modal-body">
+          <img src="./src/assets/Img Placeholder.svg" alt="" />
+          <div class="modal-description">
+            <p></p>
+            <div class="actionsContainer">
+              <div class="btnContainer">
+                <button type="button">See Live</button>
+                <img src="src/assets/link.svg" alt="Link icon" />
+              </div>
+              <div class="btnContainer">
+                <button>See source</button>
+                <i class="fab fa-github"></i>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <script
       src="https://kit.fontawesome.com/3b9cd09213.js"
       crossorigin="anonymous"
     ></script>
-
     <script src="src/index.js"></script>
   </body>
 </html>

@@ -605,77 +605,24 @@ section#contact > form textarea {
   border: none;
 }
 
-section.modalContainer .modal {
+.modal {
+  display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  visibility: hidden;
-}
-
-section.modalContainer {
-  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100vw;
-  height: 100vh;
-  border: 1px solid red;
-  visibility: hidden;
-  opacity: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  backdrop-filter: blur(4px);
+  margin: auto;
 }
 
-section.modalContainer .blur {
-  filter: blur(5px);
-}
-
-section.modalContainer .modal .content {
-  position: relative;
-  padding: 10px;
-  width: 400px;
-  height: 300px;
-  border-radius: 8px;
-  background-color: #fff;
-  box-shadow: rgba(112, 128, 175, 0.2) 0px 16px 24px 0px;
-  transform: scale(0);
-  transition: transform 300ms cubic-bezier(0.57, 0.21, 0.69, 1.25);
-}
-
-.modal .close {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  border-radius: 8px;
-  background-color: #7080af;
-  clip-path: polygon(
-    0 10%,
-    10% 0,
-    50% 40%,
-    89% 0,
-    100% 10%,
-    60% 50%,
-    100% 90%,
-    90% 100%,
-    50% 60%,
-    10% 100%,
-    0 89%,
-    40% 50%
-  );
-}
-
-section.modalContainer .open {
-  opacity: 1;
-  visibility: visible;
-}
-section.modalContainer .modal.open .content {
-  transform: scale(1);
+.open {
+  display: block;
 }
 
 @media screen and (min-width: 776px) {
@@ -914,6 +861,48 @@ section.modalContainer .modal.open .content {
     flex-direction: column;
     align-items: flex-start;
     row-gap: 24px;
+  }
+
+  .modal-content {
+    height: fit-content;
+    width: calc(100vw - 200px);
+    height: fit-content;
+    margin: 100px auto;
+    padding: 24px;
+  }
+
+  .modal-content > .modal-header > .languages {
+    margin-top: 12px;
+  }
+
+  .close {
+    top: 38px;
+    right: 38px;
+  }
+
+  .modal-content > .modal-body {
+    flex-direction: row;
+    column-gap: 25px;
+    position: relative;
+  }
+
+  .modal-content > .modal-body > img {
+    width: 659px;
+    height: 60%;
+  }
+
+  .modal-content > .modal-body .modal-description {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+  }
+
+  .modal-content .actionsContainer {
+    position: absolute;
+    bottom: 0;
+    justify-content: flex-start;
+    column-gap: 12px;
   }
 }
 
