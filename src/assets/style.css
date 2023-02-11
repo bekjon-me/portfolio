@@ -625,6 +625,118 @@ section#contact > form textarea {
   display: block;
 }
 
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  filter: blur(0);
+  width: calc(100% - 32px);
+  height: fit-content;
+  padding: 16px;
+}
+.modal-content > .modal-header > h2 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: #172b4d;
+  margin-top: 5px;
+}
+.modal-content > .modal-header > .languages {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  column-gap: 6px;
+  margin-top: 22px;
+}
+.modal-content > .modal-body > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.modal-content > .modal-header > .languages > li {
+  padding: 10px 12px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  border: 1px solid #979493;
+}
+.close {
+  color: #67798e;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal-content > .modal-body {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+.modal-content > .modal-body p {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #344563;
+}
+.modal-content .actionsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  flex-wrap: wrap;
+  row-gap: 12px;
+}
+.modal-content .actionsContainer .btnContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: fit-content;
+  background-color: #ff6b00;
+  padding-right: 12px;
+}
+.modal-content .actionsContainer .btnContainer img {
+  width: 24px;
+  height: 24px;
+  color: transparent;
+}
+.modal-content .actionsContainer .btnContainer i {
+  font-size: 24px;
+  color: #fff;
+  background: transparent;
+  width: 24px;
+  height: 24px;
+}
+.modal-content .actionsContainer button {
+  background: #ff6b00;
+  border: none;
+  padding: 12px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
 #contact > form .error {
   display: none;
   top: 0;
