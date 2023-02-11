@@ -119,6 +119,5 @@ allSeeProjectBtns.forEach((btn, mainIndex) => {
       });
     });
     image.src = projects[mainIndex].image;
-    console.log(modal.classList);
   });
 });
