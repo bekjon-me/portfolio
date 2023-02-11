@@ -10,6 +10,22 @@ const modalH2 = document.querySelector('.modal-header h2');
 const modalText = document.querySelector('.modal-body p');
 const languages = document.querySelectorAll('.modal-header ul');
 const image = document.querySelector('.modal-body img');
+const contactInput = document.querySelector(
+  '#contact form input[type="email"]',
+);
+const form = document.querySelector('#contact form');
+const error = document.querySelector('#contact form .error');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  if (contactInput.value !== contactInput.value.toLowerCase()) {
+    error.classList.add('show');
+    error.textContent = 'Email must be in lowercase';
+  } else {
+    error.classList.remove('show');
+    error.textContent = '';
+    form.submit();
+  }
+});
 
 window.onscroll = () => {
   let current = '';
@@ -110,7 +126,7 @@ allSeeProjectBtns.forEach((btn, mainIndex) => {
     modal.classList.toggle('blur');
     modalH2.textContent = projects[mainIndex].name;
     modalText.textContent = projects[mainIndex].text;
-    languages.forEach((language, index) => {
+    languages.forEach((language) => {
       language.innerHTML = '';
       projects[mainIndex].technologies.forEach((tech) => {
         const li = document.createElement('li');
