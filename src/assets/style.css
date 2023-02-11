@@ -125,7 +125,7 @@ header .nav-links li:last-child {
   display: none;
 }
 
-.open {
+.modal.open {
   display: block;
 }
 
