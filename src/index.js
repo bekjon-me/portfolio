@@ -27,7 +27,6 @@ form.addEventListener('submit', (e) => {
     form.submit();
   }
 });
-
 const textarea = document.querySelector('#contact textarea');
 
 let formData = {
