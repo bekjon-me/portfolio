@@ -11,6 +11,23 @@ const modalText = document.querySelector('.modal-body p');
 const languages = document.querySelectorAll('.modal-header ul');
 const image = document.querySelector('.modal-body img');
 const formInputs = document.querySelectorAll('#contact input');
+const contactInput = document.querySelector(
+  '#contact form input[type="email"]',
+);
+const form = document.querySelector('#contact form');
+const error = document.querySelector('#contact form .error');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  if (contactInput.value !== contactInput.value.toLowerCase()) {
+    error.classList.add('show');
+    error.textContent = 'Email must be in lowercase';
+  } else {
+    error.classList.remove('show');
+    error.textContent = '';
+    form.submit();
+  }
+});
+
 const textarea = document.querySelector('#contact textarea');
 
 let formData = {
@@ -31,13 +48,11 @@ if (localStorage.getItem('formData')) {
 formInputs.forEach((input) => {
   input.addEventListener('input', (e) => {
     formData[e.target.name] = e.target.value;
-    console.log(formData);
     localStorage.setItem('formData', JSON.stringify(formData));
   });
 });
 
 textarea.addEventListener('input', (e) => {
-  console.log(formData);
   formData[e.target.name] = e.target.value;
   localStorage.setItem('formData', JSON.stringify(formData));
 });
@@ -137,12 +152,11 @@ const projects = [
 
 allSeeProjectBtns.forEach((btn, mainIndex) => {
   btn.addEventListener('click', () => {
-    console.log(mainIndex);
     modal.classList.toggle('open');
     modal.classList.toggle('blur');
     modalH2.textContent = projects[mainIndex].name;
     modalText.textContent = projects[mainIndex].text;
-    languages.forEach((language, index) => {
+    languages.forEach((language) => {
       language.innerHTML = '';
       projects[mainIndex].technologies.forEach((tech) => {
         const li = document.createElement('li');

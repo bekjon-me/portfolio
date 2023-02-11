@@ -125,6 +125,10 @@ header .nav-links li:last-child {
   display: none;
 }
 
+.modal.open {
+  display: block;
+}
+
 header > .open {
   position: absolute;
   display: flex;
@@ -155,6 +159,16 @@ section#headline > .info {
   display: flex;
   flex-direction: column;
   row-gap: 12px;
+}
+
+.modal-content > .modal-header > h2 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: #172b4d;
+  margin-top: 5px;
 }
 
 section#contact > h2 {
@@ -205,6 +219,14 @@ ul.social_media {
 
 #contact_social {
   justify-content: center;
+}
+
+.modal-content .actionsContainer .btnContainer i {
+  font-size: 24px;
+  color: #fff;
+  background: transparent;
+  width: 24px;
+  height: 24px;
 }
 
 #contact_social i {
@@ -278,6 +300,15 @@ section#works > .cards > .specialCard > .description > h3 {
   color: #091e42;
 }
 
+.modal-content > .modal-body p {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #344563;
+}
+
 section#about > .info > .content > p {
   font-family: 'Inter', sans-serif;
   font-style: normal;
@@ -285,6 +316,18 @@ section#about > .info > .content > p {
   font-size: 16px;
   line-height: 24px;
   color: #f4f5f7;
+}
+
+.modal-content > .modal-body > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-content .actionsContainer .btnContainer img {
+  width: 24px;
+  height: 24px;
+  color: transparent;
 }
 
 #work img:hover {
@@ -305,6 +348,16 @@ section#works > .cards > .specialCard > .description > ul.languages {
   float: left;
   list-style-type: none;
   white-space: nowrap;
+}
+
+.modal-content > .modal-header > .languages > li {
+  padding: 10px 12px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  border: 1px solid #979493;
 }
 
 section#about > .hardSkills > ul > li {
@@ -332,6 +385,21 @@ section#works > .cards > .specialCard > .description > ul.languages > li {
   line-height: 20px;
   color: #091e42;
   border: 1px solid #8993a4;
+}
+
+.modal-content .actionsContainer button {
+  background: #ff6b00;
+  border: none;
+  padding: 12px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #fff;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
 section#contact > form button {
@@ -502,13 +570,7 @@ section#works > .cards > .otherCards > .card > .information > ul.languages {
   column-gap: 12px;
 }
 
-section#works
-  > .cards
-  > .otherCards
-  > .card
-  > .information
-  > ul.languages
-  > li {
+section#works > .cards > .otherCards > .card > .information > ul.languages > li {
   padding: 10px 12px;
   font-family: 'Inter', sans-serif;
   font-style: normal;
@@ -596,7 +658,7 @@ section#contact > form textarea {
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
-  color: #000;
+  color: #979493;
   width: 100%;
 }
 
@@ -608,7 +670,6 @@ section#contact > form textarea {
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
@@ -621,30 +682,16 @@ section#contact > form textarea {
   margin: auto;
 }
 
-.open {
-  display: block;
-}
-
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto;
-  padding: 20px;
   border: 1px solid #888;
-  width: 80%;
   filter: blur(0);
   width: calc(100% - 32px);
-  height: fit-content;
+  height: auto;
   padding: 16px;
 }
-.modal-content > .modal-header > h2 {
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 44px;
-  color: #172b4d;
-  margin-top: 5px;
-}
+
 .modal-content > .modal-header > .languages {
   display: flex;
   flex-direction: row;
@@ -652,20 +699,7 @@ section#contact > form textarea {
   column-gap: 6px;
   margin-top: 22px;
 }
-.modal-content > .modal-body > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.modal-content > .modal-header > .languages > li {
-  padding: 10px 12px;
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 16px;
-  border: 1px solid #979493;
-}
+
 .close {
   color: #67798e;
   position: absolute;
@@ -674,26 +708,21 @@ section#contact > form textarea {
   font-size: 28px;
   font-weight: bold;
 }
+
 .close:hover,
 .close:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
 }
+
 .modal-content > .modal-body {
   margin-top: 24px;
   display: flex;
   flex-direction: column;
   row-gap: 24px;
 }
-.modal-content > .modal-body p {
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #344563;
-}
+
 .modal-content .actionsContainer {
   display: flex;
   justify-content: space-between;
@@ -702,6 +731,7 @@ section#contact > form textarea {
   flex-wrap: wrap;
   row-gap: 12px;
 }
+
 .modal-content .actionsContainer .btnContainer {
   display: flex;
   flex-direction: row;
@@ -709,50 +739,6 @@ section#contact > form textarea {
   width: fit-content;
   background-color: #ff6b00;
   padding-right: 12px;
-}
-.modal-content .actionsContainer .btnContainer img {
-  width: 24px;
-  height: 24px;
-  color: transparent;
-}
-.modal-content .actionsContainer .btnContainer i {
-  font-size: 24px;
-  color: #fff;
-  background: transparent;
-  width: 24px;
-  height: 24px;
-}
-.modal-content .actionsContainer button {
-  background: #ff6b00;
-  border: none;
-  padding: 12px;
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
-  color: #fff;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-#contact > form .error {
-  display: none;
-  top: 0;
-  left: 0;
-  background-color: #fff;
-  color: red;
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
-  text-align: center;
-}
-
-#contact > form .error.show {
-  display: block;
 }
 
 @media screen and (min-width: 776px) {
@@ -920,6 +906,11 @@ section#contact > form textarea {
     justify-content: center;
   }
 
+  .modal-content > .modal-body > img {
+    width: 659px;
+    height: 60%;
+  }
+
   section#works > .cards > .specialCard > img {
     width: 58%;
   }
@@ -994,9 +985,8 @@ section#contact > form textarea {
   }
 
   .modal-content {
-    height: fit-content;
+    height: auto;
     width: calc(100vw - 200px);
-    height: fit-content;
     margin: 100px auto;
     padding: 24px;
   }
@@ -1014,11 +1004,6 @@ section#contact > form textarea {
     flex-direction: row;
     column-gap: 25px;
     position: relative;
-  }
-
-  .modal-content > .modal-body > img {
-    width: 659px;
-    height: 60%;
   }
 
   .modal-content > .modal-body .modal-description {
