@@ -11,8 +11,6 @@ const modalText = document.querySelector('.modal-body p');
 const languages = document.querySelectorAll('.modal-header ul');
 const image = document.querySelector('.modal-body img');
 
-console.log(allSeeProjectBtns);
-
 window.onscroll = () => {
   let current = '';
   sections.forEach((section) => {
@@ -108,12 +106,11 @@ const projects = [
 
 allSeeProjectBtns.forEach((btn, mainIndex) => {
   btn.addEventListener('click', () => {
-    console.log(mainIndex);
     modal.classList.toggle('open');
     modal.classList.toggle('blur');
     modalH2.textContent = projects[mainIndex].name;
     modalText.textContent = projects[mainIndex].text;
-    languages.forEach((language, index) => {
+    languages.forEach((language) => {
       language.innerHTML = '';
       projects[mainIndex].technologies.forEach((tech) => {
         const li = document.createElement('li');
