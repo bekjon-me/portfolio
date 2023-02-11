@@ -106,7 +106,6 @@ const projects = [
 
 allSeeProjectBtns.forEach((btn, mainIndex) => {
   btn.addEventListener('click', () => {
-    console.log(mainIndex);
     modal.classList.toggle('open');
     modal.classList.toggle('blur');
     modalH2.textContent = projects[mainIndex].name;
