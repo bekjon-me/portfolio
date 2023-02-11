@@ -5,6 +5,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap'); /* Inter 500 */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap'); /* Inter 700 */
 
+@media screen and (max-width: 950px) {
+  section#headline {
+    background-size: 45%;
+    background-position-y: 240px;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -54,6 +61,7 @@ header > .hamburger {
   row-gap: 3px;
   justify-content: center;
   z-index: 2;
+  cursor: pointer;
 }
 
 header > .hamburger > .line {
@@ -117,6 +125,10 @@ header .nav-links li:last-child {
   display: none;
 }
 
+.modal.open {
+  display: block;
+}
+
 header > .open {
   position: absolute;
   display: flex;
@@ -139,14 +151,24 @@ section#headline {
   background-image: url('./illustration-header-mobile.svg');
   background-repeat: no-repeat;
   background-position-x: right;
-  background-position-y: 135%;
   padding-bottom: 120px;
+  background-size: inherit;
 }
 
 section#headline > .info {
   display: flex;
   flex-direction: column;
   row-gap: 12px;
+}
+
+.modal-content > .modal-header > h2 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: #172b4d;
+  margin-top: 5px;
 }
 
 section#contact > h2 {
@@ -199,6 +221,14 @@ ul.social_media {
   justify-content: center;
 }
 
+.modal-content .actionsContainer .btnContainer i {
+  font-size: 24px;
+  color: #fff;
+  background: transparent;
+  width: 24px;
+  height: 24px;
+}
+
 #contact_social i {
   color: #1c1a19;
   font-size: 24px;
@@ -238,7 +268,6 @@ section#works > .cards {
 section#works > .cards > .specialCard {
   display: flex;
   flex-direction: column;
-  row-gap: 12px;
 }
 
 section#works > .cards > .otherCards {
@@ -256,6 +285,12 @@ section#about > .hardSkills > ul > li:first-child > h3 {
   color: #fff;
 }
 
+section#works > .cards > .specialCard > .description {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+
 section#works > .cards > .specialCard > .description > h3 {
   font-family: 'Crete Round', sans-serif;
   font-style: normal;
@@ -265,6 +300,15 @@ section#works > .cards > .specialCard > .description > h3 {
   color: #091e42;
 }
 
+.modal-content > .modal-body p {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #344563;
+}
+
 section#about > .info > .content > p {
   font-family: 'Inter', sans-serif;
   font-style: normal;
@@ -272,6 +316,18 @@ section#about > .info > .content > p {
   font-size: 16px;
   line-height: 24px;
   color: #f4f5f7;
+}
+
+.modal-content > .modal-body > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-content .actionsContainer .btnContainer img {
+  width: 24px;
+  height: 24px;
+  color: transparent;
 }
 
 #work img:hover {
@@ -292,6 +348,16 @@ section#works > .cards > .specialCard > .description > ul.languages {
   float: left;
   list-style-type: none;
   white-space: nowrap;
+}
+
+.modal-content > .modal-header > .languages > li {
+  padding: 10px 12px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  border: 1px solid #979493;
 }
 
 section#about > .hardSkills > ul > li {
@@ -319,6 +385,21 @@ section#works > .cards > .specialCard > .description > ul.languages > li {
   line-height: 20px;
   color: #091e42;
   border: 1px solid #8993a4;
+}
+
+.modal-content .actionsContainer button {
+  background: #ff6b00;
+  border: none;
+  padding: 12px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #fff;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
 section#contact > form button {
@@ -586,6 +667,80 @@ section#contact > form textarea {
   border: none;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  backdrop-filter: blur(4px);
+  margin: auto;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  border: 1px solid #888;
+  filter: blur(0);
+  width: calc(100% - 32px);
+  height: auto;
+  padding: 16px;
+}
+
+.modal-content > .modal-header > .languages {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  column-gap: 6px;
+  margin-top: 22px;
+}
+
+.close {
+  color: #67798e;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content > .modal-body {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+.modal-content .actionsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  flex-wrap: wrap;
+  row-gap: 12px;
+}
+
+.modal-content .actionsContainer .btnContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: fit-content;
+  background-color: #ff6b00;
+  padding-right: 12px;
+}
+
 @media screen and (min-width: 776px) {
   .container {
     padding: 0 142px !important;
@@ -664,10 +819,11 @@ section#contact > form textarea {
 
   section#headline {
     row-gap: 24px;
-    background-image: url('Illustration-header.svg');
-    background-size: contain;
-    background-position-x: 118%;
-    background-position-y: center;
+    background-image: url(Illustration-header.svg);
+    background-position-x: 130%;
+    background-size: inherit;
+    padding-top: 190px;
+    background-position-y: -50px;
   }
 
   section#headline > .info {
@@ -750,6 +906,11 @@ section#contact > form textarea {
     justify-content: center;
   }
 
+  .modal-content > .modal-body > img {
+    width: 659px;
+    height: 60%;
+  }
+
   section#works > .cards > .specialCard > img {
     width: 58%;
   }
@@ -821,6 +982,48 @@ section#contact > form textarea {
     flex-direction: column;
     align-items: flex-start;
     row-gap: 24px;
+  }
+
+  .modal-content {
+    height: auto;
+    width: calc(100vw - 200px);
+    margin: 100px auto;
+    padding: 24px;
+  }
+
+  .modal-content > .modal-header > .languages {
+    margin-top: 12px;
+  }
+
+  .close {
+    top: 38px;
+    right: 38px;
+  }
+
+  .modal-content > .modal-body {
+    flex-direction: row;
+    column-gap: 25px;
+    position: relative;
+  }
+
+  .modal-content > .modal-body .modal-description {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+  }
+
+  .modal-content .actionsContainer {
+    position: absolute;
+    bottom: 0;
+    justify-content: flex-start;
+    column-gap: 12px;
+  }
+}
+
+@media (min-width: 776px) and (max-width: 890px) {
+  section#headline {
+    background-position-y: 200px;
   }
 }
 
